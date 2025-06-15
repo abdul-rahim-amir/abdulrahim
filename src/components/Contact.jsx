@@ -1,5 +1,12 @@
 import React from 'react';
-import { FaPhoneAlt, FaEnvelope, FaGithub, FaLinkedin, FaDribbble, FaBehance } from 'react-icons/fa';
+import {
+    FaWhatsapp,
+    FaEnvelope,
+    FaGithub,
+    FaLinkedin,
+    FaDribbble,
+    FaBehance,
+} from 'react-icons/fa';
 
 export default function Contact() {
     return (
@@ -15,12 +22,24 @@ export default function Contact() {
                     {/* Left: Contact Details */}
                     <div className="flex-1 space-y-6">
                         <div className="flex items-center gap-4">
-                            <FaPhoneAlt className="text-white text-lg" />
-                            <span className="text-gray-300 text-lg">+92 324 7219681</span>
+                            <FaWhatsapp className="text-green-500 text-lg" />
+                            <a
+                                href="https://wa.me/923247219681"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-300 text-lg hover:text-white transition"
+                            >
+                                +92 324 7219681
+                            </a>
                         </div>
                         <div className="flex items-center gap-4">
                             <FaEnvelope className="text-white text-lg" />
-                            <span className="text-gray-300 text-lg">chaudharyabdulrahimamir@gmail.com</span>
+                            <a
+                                href="mailto:chaudharyabdulrahimamir@gmail.com"
+                                className="text-gray-300 text-lg hover:text-white transition"
+                            >
+                                chaudharyabdulrahimamir@gmail.com
+                            </a>
                         </div>
                     </div>
 

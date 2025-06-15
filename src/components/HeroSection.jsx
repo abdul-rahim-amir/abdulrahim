@@ -10,14 +10,19 @@ export default function HeroSection() {
         <div className="flex flex-col items-center justify-center p-4 relative min-h-screen">
             <Header />
             <BackgroundImage />
+            
+            {/* Profile Section */}
             <div className="relative z-10 mt-10 md:mt-20">
-                <div className="rounded-[34px] border-4 border-white">
+                <div className="rounded-[34px] border-4 border-white relative">
+                    {/* Social Links - positioned inside the border with responsive positioning */}
                     <div className="relative top-20">
                         <SocialLinks />
                     </div>
                     <ProfileImage />
                 </div>
             </div>
+            
+            {/* Intro Text */}
             <IntroText />
         </div>
     );
