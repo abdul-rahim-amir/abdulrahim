@@ -69,8 +69,9 @@ export default function About() {
             <h2 className="text-5xl font-extrabold mb-10">About Me</h2>
 
             <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-10">
+                {/* Left: Typing Text and Button */}
                 <div className="flex-1 text-left">
-                    <p className="text-lg leading-relaxed mb-6">
+                    <p className="text-lg leading-relaxed mb-6 min-h-[220px]">
                         <span ref={textRef}></span>
                         {!hasTyped && (
                             <span
@@ -89,6 +90,7 @@ export default function About() {
                     </a>
                 </div>
 
+                {/* Right: Image and Dots */}
                 <div className="flex-1 flex flex-col items-center">
                     <img
                         src={images[currentImageIndex]}
