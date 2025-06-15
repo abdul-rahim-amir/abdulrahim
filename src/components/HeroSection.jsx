@@ -11,8 +11,8 @@ export default function HeroSection() {
             <Header />
             <BackgroundImage />
             
-            {/* Profile Section */}
-            <div className="relative z-10 mt-10 md:mt-20">
+            {/* Profile Section - moved higher and made smaller */}
+            <div className="relative z-10 mt-0 md:mt-20 scale-75 md:scale-100">
                 <div className="rounded-[34px] border-4 border-white relative">
                     {/* Social Links - positioned inside the border with responsive positioning */}
                     <div className="relative top-20">
@@ -21,9 +21,10 @@ export default function HeroSection() {
                     <ProfileImage />
                 </div>
             </div>
-            
-            {/* Intro Text */}
-            <IntroText />
+            {/* Intro Text - Adjusted spacing and made smaller on mobile */}
+            <div className="mt-2 md:mt-4 px-4 w-full max-w-lg text-sm md:text-base">
+                <IntroText />
+            </div>
         </div>
     );
 }

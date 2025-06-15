@@ -16,8 +16,8 @@ export default function App() {
 
       {/* Page content sections */}
       <About />
-      <Services />
       <Skills />
+      <Services />
       <Work />
       <Footer />
     </>
