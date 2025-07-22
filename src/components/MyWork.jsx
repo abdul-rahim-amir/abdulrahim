@@ -87,11 +87,14 @@ export default function HorizontalProjects() {
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className="panel flex-shrink-0 w-screen min-h-screen flex items-center justify-center px-4 sm:px-10 py-20"
+                        className="panel flex-shrink-0 w-screen min-h-screen flex items-center justify-center px-4 sm:px-10 py-16"
                     >
-                        <div className="flex flex-col lg:flex-row items-center gap-10 max-w-6xl w-full">
+                        <div
+                            style={{ backgroundColor: "#1A1A1A" }}
+                            className="rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-8 max-w-6xl w-full shadow-lg"
+                        >
                             {/* Project Image */}
-                            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[400px] xl:w-[500px] h-[400px] sm:h-[500px] lg:h-[600px] bg-black rounded-2xl shadow-2xl overflow-hidden flex items-center justify-center">
+                            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[350px] xl:w-[400px] h-[300px] sm:h-[350px] bg-black rounded-2xl shadow-md overflow-hidden flex items-center justify-center">
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -101,10 +104,10 @@ export default function HorizontalProjects() {
 
                             {/* Project Info */}
                             <div className="text-left max-w-lg">
-                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                                <h2 className="text-2xl sm:text-3xl font-bold mb-3">
                                     {project.title}
                                 </h2>
-                                <p className="text-gray-300 mb-6 text-sm sm:text-base">
+                                <p className="text-gray-300 mb-4 text-sm sm:text-base">
                                     {project.description}
                                 </p>
                                 <h4 className="font-semibold text-white mb-2">

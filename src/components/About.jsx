@@ -1,7 +1,7 @@
-// src/components/About.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FaDownload } from 'react-icons/fa';
 import img1 from '../assets/pic.jpg';
 import img2 from '../assets/pic2.jpg';
 import img3 from '../assets/pic3.jpg';
@@ -64,14 +64,14 @@ export default function About() {
         <section
             id="about"
             ref={sectionRef}
-            className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-10"
+            className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-20 overflow-hidden"
         >
-            <h2 className="text-5xl font-extrabold mb-10">About Me</h2>
+            <h2 className="text-5xl font-extrabold mb-14 relative z-10">About Me</h2>
 
-            <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-10">
+            <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-12 relative z-10">
                 {/* Left: Typing Text and Button */}
                 <div className="flex-1 text-left">
-                    <p className="text-lg leading-relaxed mb-6 min-h-[220px]">
+                    <p className="text-lg leading-relaxed mb-8 min-h-[220px] tracking-wide text-gray-300">
                         <span ref={textRef}></span>
                         {!hasTyped && (
                             <span
@@ -84,25 +84,31 @@ export default function About() {
                     <a
                         href={myCV}
                         download="Rahim_CV.pdf"
-                        className="inline-block bg-transparent text-white font-semibold px-5 py-3 rounded-[50px] border border-white hover:bg-white hover:text-black transition duration-300"
+                        className="inline-flex items-center gap-2 bg-transparent text-white font-semibold px-6 py-3 rounded-full border border-white hover:bg-white hover:text-black transition duration-300 shadow-md hover:shadow-white/30"
                     >
-                        Download CV
+                        <FaDownload /> Download CV
                     </a>
                 </div>
 
                 {/* Right: Image and Dots */}
-                <div className="flex-1 flex flex-col items-center">
-                    <img
-                        src={images[currentImageIndex]}
-                        alt={`Slide ${currentImageIndex + 1}`}
-                        className="w-48 h-64 object-cover rounded-md transform rotate-3 shadow-lg transition-all duration-500"
-                    />
-                    <div className="flex gap-2 mt-4">
+                <div className="flex-1 flex flex-col items-center group">
+                    <div className="relative w-48 h-64 rounded-lg overflow-hidden shadow-xl border border-white/20 transform group-hover:rotate-1 transition-transform duration-300">
+                        <img
+                            src={images[currentImageIndex]}
+                            alt={`Slide ${currentImageIndex + 1}`}
+                            className="w-full h-full object-cover rounded-md"
+                        />
+                    </div>
+                    <div className="flex gap-3 mt-5">
                         {images.map((_, index) => (
                             <button
                                 key={index}
                                 onClick={() => handleDotClick(index)}
-                                className={`w-3 h-3 rounded-full ${index === currentImageIndex ? 'bg-white' : 'bg-gray-500'} transition-colors duration-300`}
+                                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                                    index === currentImageIndex
+                                        ? 'bg-white scale-125'
+                                        : 'bg-gray-600 opacity-60'
+                                }`}
                             />
                         ))}
                     </div>

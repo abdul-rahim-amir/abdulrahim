@@ -13,9 +13,19 @@ export default function Contact() {
         <section className="bg-black text-white py-16 px-6" id="contact">
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-5xl font-extrabold mb-6">Let's Connect</h2>
-                <p className="text-gray-400 mb-12 text-lg">
+                <p className="text-gray-400 mb-8 text-lg">
                     Got a project idea or just want to say hi? I’d love to hear from you. Let’s build something great together.
                 </p>
+
+                {/* 👉 Book Appointment Button */}
+                <a
+                    href="https://cal.com/abdul-rahim-amir" // Replace with your actual Cal.com link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mb-12 px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition"
+                >
+                    Book an Appointment
+                </a>
 
                 {/* Two-Column Section */}
                 <div className="flex flex-col md:flex-row justify-between gap-10 text-left">
