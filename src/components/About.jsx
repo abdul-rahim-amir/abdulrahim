@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import img1 from '../assets/pic.jpg';
 import img2 from '../assets/pic2.jpg';
 import img3 from '../assets/pic3.jpg';
-import myCV from '../assets/Rahim_CV.pdf';
+import myCV from '../assets/Rahim_Resume.pdf';
 
 gsap.registerPlugin(ScrollTrigger);
 
